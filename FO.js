@@ -28,7 +28,6 @@ let inputArr = process.argv.slice(2);
 // console.log(inputArr);
 let command = inputArr[0];
 
-
 switch(command){
     case "tree":
         console.log("Tree command is passed");
