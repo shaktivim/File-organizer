@@ -19,18 +19,21 @@ const fs = require('fs');
 const path = require('path');
 
 const organizeModuleFile = require('./commands/organize');
+const treeModule = require("./commands/tree");
 const helpModuleFile = require('./commands/help');
 
 
-let inputArr = process.argv.slice(2);           
+
+let inputArr = process.argv.slice(2);
 // enter < node FO.js organise 'C:\Users\SHAKTIVIM\Desktop\FJP-8\3_NodeJs\testFiles' >
 // providing path of folder where files to be organized are present
 // console.log(inputArr);
 let command = inputArr[0];
 
-switch(command){
+switch (command) {
     case "tree":
-        console.log("Tree command is passed");
+        // console.log("Tree command is passed");
+        treeModule.treeFnKey(inputArr[1]);
         break;
     case "organize":
         // console.log("Organize command is passed");
@@ -39,7 +42,7 @@ switch(command){
     case "help":
         helpModuleFile.helpListKey();
         break;
-    default :
+    default:
         console.log(command + "command does not exit. " + "Enter a valid command");
 }
 
